@@ -29,7 +29,7 @@ class CategoryModel{
     categories.add(
         CategoryModel(
             name: 'Package',
-            iconPath: "assets/icons/food/fast-food-svgrepo-com.svg",
+            iconPath:"assets/icons/food/fast-food-svgrepo-com.svg",
             boxColor: Color(0xffC58BF2)));
     return categories;
   }

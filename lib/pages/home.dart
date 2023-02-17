@@ -71,7 +71,10 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.white,
                               shape: BoxShape.circle
                             ),
-                            child: SvgPicture.asset(categories[index].iconPath,height: 50,width: 50,),
+                            child: Padding(
+                              padding: const EdgeInsets.all(6),
+                              child: SvgPicture.asset(categories[index].iconPath,height: 50,width: 50,),
+                            ),
                           ),
                         ],
                       ),
