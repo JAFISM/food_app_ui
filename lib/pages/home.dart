@@ -1,11 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+import 'category_model.dart';
+
+class HomePage extends StatefulWidget {
+   HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  List<CategoryModel>categories=[];
+
+  void getCategories(){
+    categories=CategoryModel.getCategories();
+  }
+
+  @override
+  void initState() {
+    getCategories();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+    getCategories();
     return Scaffold(
       appBar: buildAppBar(),
       body: Column(
@@ -28,9 +48,35 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(height: 15,),
               Container(
-                height: 150,
-                color: Colors.greenAccent,
-                child: ListView.builder(itemBuilder: (context,index)=>Container()),
+                height: 130,
+                //color: Colors.greenAccent,
+                child: ListView.separated(
+                  separatorBuilder: (context,index)=>SizedBox(width: 25,),
+                  itemCount: categories.length,
+                    scrollDirection: Axis.horizontal,
+                    padding: EdgeInsets.only(left: 20,right: 20),
+                    itemBuilder: (context,index)=>Container(
+                      width: 100,
+                  decoration: BoxDecoration(
+                    color: categories[index].boxColor.withOpacity(0.5),
+                    borderRadius: BorderRadius.circular(16)
+                  ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle
+                            ),
+                            child: SvgPicture.asset(categories[index].iconPath,height: 50,width: 50,),
+                          ),
+                        ],
+                      ),
+                ),
+                ),
               )
             ],
           )
