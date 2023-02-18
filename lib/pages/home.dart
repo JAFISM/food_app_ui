@@ -58,9 +58,40 @@ class _HomePageState extends State<HomePage> {
               ListView.separated(
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return Container(
-                      color: Colors.blue,
-                      height: 80,
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 20,right: 20),
+                      child: Container(
+                       // padding: EdgeInsets.only(left: 20,right: 20),
+                        height: 100,
+                        decoration: BoxDecoration(
+                          color: populardiets[index].viewSelected?
+                          Color(0xffC58BF2).withOpacity(0.3):Colors.blueGrey.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            InkWell(
+                                child: SvgPicture.asset(populardiets[index].iconPath,height: 50,width: 50,),
+                              onTap: (){},
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(populardiets[index].name,style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 16),),
+                                Text(populardiets[index].level+" | "+populardiets[index].duration+" | "+populardiets[index].calories,
+                                  style: TextStyle(color: Color(0xff7B6F72),fontWeight: FontWeight.w500,fontSize: 16),)
+                              ],
+                            ),
+                            CircleAvatar(
+                              backgroundColor: Color(0xff9DCEFF),
+                                child: Icon(Icons.arrow_forward_ios,
+                                  color: Colors.white ,
+                                ))
+                          ],
+                        ),
+                      ),
                     );
                   },
                   separatorBuilder: (context, index) => SizedBox(
