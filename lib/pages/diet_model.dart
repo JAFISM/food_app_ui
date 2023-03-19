@@ -14,7 +14,7 @@ class DietModel {
       required this.bgcolor,
       required this.viewSelected});
 
-  static List<DietModel> getDiets() {
+  static  List<DietModel> getDiets() {
     List<DietModel> diets = [];
 
     diets.add(DietModel(
@@ -23,7 +23,7 @@ class DietModel {
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
-        bgcolor: Color(0xffC58BF2),
+        bgcolor: const Color(0xffC58BF2),
         viewSelected: true));
 
     diets.add(DietModel(
@@ -32,7 +32,7 @@ class DietModel {
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
-        bgcolor:Color(0xff92A3FD) ,
+        bgcolor:const Color(0xff92A3FD) ,
         viewSelected: false));
     diets.add(DietModel(
         name: "Packages",
@@ -40,14 +40,14 @@ class DietModel {
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
-        bgcolor: Color(0xffC58BF2),
+        bgcolor: const Color(0xffC58BF2),
         viewSelected: false));
     diets.add(DietModel(
         name: "Burger",
         iconPath: "assets/icons/fast-food-burger-svgrepo-com.svg",
         duration: "20mins",
         calories: "230kcal",
-        bgcolor: Color(0xff92A3FD),
+        bgcolor: const Color(0xff92A3FD),
         level: "Easy",
         viewSelected: false));
     return diets;

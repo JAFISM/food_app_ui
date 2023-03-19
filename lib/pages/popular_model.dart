@@ -23,7 +23,7 @@ class PopularModel {
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
-        bgcolor: Color(0xffC58BF2),
+        bgcolor: const Color(0xffC58BF2),
         viewSelected: true));
 
    populardiets.add(PopularModel(
@@ -32,7 +32,7 @@ class PopularModel {
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
-        bgcolor:Color(0xff92A3FD) ,
+        bgcolor:const Color(0xff92A3FD) ,
         viewSelected: false));
    populardiets.add(PopularModel(
         name: "Packages",
@@ -40,14 +40,14 @@ class PopularModel {
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
-        bgcolor: Color(0xffC58BF2),
+        bgcolor: const Color(0xffC58BF2),
         viewSelected: false));
     populardiets.add(PopularModel(
         name: "Burger",
         iconPath: "assets/icons/fast-food-burger-svgrepo-com.svg",
         duration: "20mins",
         calories: "230kcal",
-        bgcolor: Color(0xff92A3FD),
+        bgcolor: const Color(0xff92A3FD),
         level: "Easy",
         viewSelected: false));
     return populardiets;
