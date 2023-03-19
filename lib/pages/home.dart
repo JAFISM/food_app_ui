@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_app_ui/pages/diet_model.dart';
@@ -91,11 +93,16 @@ class _HomePageState extends State<HomePage> {
                                 style: TextStyle(color: Color(0xff7B6F72),fontWeight: FontWeight.w500,fontSize: 16),)
                             ],
                           ),
-                          CircleAvatar(
-                            backgroundColor: Color(0xff9DCEFF),
-                              child: Icon(Icons.arrow_forward_ios,
-                                color: Colors.white ,
-                              ))
+                          FloatingActionButton.small(
+                            onPressed: (){},
+                            backgroundColor:Color(0xff9DCEFF),
+                            child: Icon(Icons.arrow_forward_ios,),
+                          )
+                          // CircleAvatar(
+                          //   backgroundColor: Color(0xff9DCEFF),
+                          //     child: Icon(Icons.arrow_forward_ios,
+                          //       color: Colors.white ,
+                          //     ))
                         ],
                       ),
                     ),

@@ -19,7 +19,7 @@ class DietModel {
 
     diets.add(DietModel(
         name: "Cake",
-        iconPath: "assets/icons/food/pudding-svgrepo-com.svg",
+        iconPath: "assets/icons/pudding-svgrepo-com.svg",
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
@@ -28,7 +28,7 @@ class DietModel {
 
     diets.add(DietModel(
         name: "Pizza",
-        iconPath: "assets/icons/food/pizza-svgrepo-com.svg",
+        iconPath: "assets/icons/pizza-svgrepo-com.svg",
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
@@ -36,7 +36,7 @@ class DietModel {
         viewSelected: false));
     diets.add(DietModel(
         name: "Packages",
-        iconPath: "assets/icons/food/fast-food-svgrepo-com.svg",
+        iconPath: "assets/icons/fast-food-svgrepo-com.svg",
         duration: "20mins",
         calories: "230kcal",
         level: "Easy",
@@ -44,7 +44,7 @@ class DietModel {
         viewSelected: false));
     diets.add(DietModel(
         name: "Burger",
-        iconPath: "assets/icons/food/fast-food-burger-svgrepo-com.svg",
+        iconPath: "assets/icons/fast-food-burger-svgrepo-com.svg",
         duration: "20mins",
         calories: "230kcal",
         bgcolor: Color(0xff92A3FD),
